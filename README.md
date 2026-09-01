@@ -1,1 +1,1 @@
-AI kullanmadan OpenGL öğrenme sürecimi bu repo da kaydediyorum
+AI kullanmadan OpenGL öğrenme sürecimi portfolyom içi bu repo da kaydediyorum
