@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\vbo.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\vbo.h",
+            "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\libraries\\include\\glad\\glad.h",
+            "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\libraries\\include\\khr\\khrplatform.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
