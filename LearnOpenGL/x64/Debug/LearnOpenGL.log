@@ -1,9 +1,4 @@
-﻿  EBO.cpp
-  Main.cpp
-  shaderClass.cpp
-  VAO.cpp
-  VBO.cpp
-  Generating Code...
+﻿  Main.cpp
 glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(init.obj)' or at 'C:\Users\emrea\OneDrive\Desktop\Visual Studio\OpenGL\LearnOpenGL\x64\Debug\glfw3.pdb'; linking object as if no debug info
 glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(window.obj)' or at 'C:\Users\emrea\OneDrive\Desktop\Visual Studio\OpenGL\LearnOpenGL\x64\Debug\glfw3.pdb'; linking object as if no debug info
 glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw3.pdb' was not found with 'glfw3.lib(context.obj)' or at 'C:\Users\emrea\OneDrive\Desktop\Visual Studio\OpenGL\LearnOpenGL\x64\Debug\glfw3.pdb'; linking object as if no debug info
