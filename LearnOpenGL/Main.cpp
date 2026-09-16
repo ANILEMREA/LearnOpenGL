@@ -6,6 +6,9 @@
 #include"VAO.h"
 #include"VBO.h"
 #include"EBO.h"
+
+
+
 // Vertices coordinates
 GLfloat vertices[] =
 { //               COORDINATES                  /     COLORS           //
@@ -24,6 +27,9 @@ GLuint indices[] =
 	3, 2, 4, // Lower right triangle
 	5, 4, 1 // Upper triangle
 };
+
+
+
 int main()
 {
 	// Initialize GLFW
@@ -55,8 +61,13 @@ int main()
 	// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
 	glViewport(0, 0, 800, 800);
 
+
+
 	// Generates Shader object using shaders defualt.vert and default.frag
 	Shader shaderProgram("default.vert", "default.frag");
+
+
+
 	// Generates Vertex Array Object and binds it
 	VAO VAO1;
 	VAO1.Bind();
@@ -76,6 +87,7 @@ int main()
 
 	// Gets ID of uniform called "scale"
 	GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
+
 
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
@@ -97,6 +109,9 @@ int main()
 		// Take care of all GLFW events
 		glfwPollEvents();
 	}
+
+
+
 	// Delete all the objects we've created
 	VAO1.Delete();
 	VBO1.Delete();
@@ -107,3 +122,4 @@ int main()
 	// Terminate GLFW before ending the program
 	glfwTerminate();
 	return 0;
+}

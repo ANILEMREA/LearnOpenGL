@@ -130,15 +130,7 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\ostream",
             "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\libraries\\include\\glad\\glad.h",
             "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\libraries\\include\\khr\\khrplatform.h",
-            "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\libraries\\include\\glfw\\glfw3.h",
-            "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\shaderclass.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\string",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\fstream",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\__msvc_filebuf.hpp",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\sstream",
-            "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\vao.h",
-            "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\vbo.h",
-            "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\ebo.h"
+            "c:\\users\\emrea\\onedrive\\desktop\\visual studio\\opengl\\learnopengl\\learnopengl\\libraries\\include\\glfw\\glfw3.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
