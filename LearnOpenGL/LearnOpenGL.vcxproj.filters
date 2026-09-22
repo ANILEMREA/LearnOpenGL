@@ -16,6 +16,9 @@
     <Filter Include="Kaynak Dosyalar\Shaders">
       <UniqueIdentifier>{28aee8bc-b279-486e-ba3c-acd164d6c001}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Kaynak Dosyalar\Textures">
+      <UniqueIdentifier>{d64841aa-fab5-4bef-ac2d-08c5c5ffa7d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glad.c">
@@ -34,6 +37,9 @@
       <Filter>Kaynak Dosyaları</Filter>
     </ClCompile>
     <ClCompile Include="VAO.cpp">
+      <Filter>Kaynak Dosyaları</Filter>
+    </ClCompile>
+    <ClCompile Include="stb.cpp">
       <Filter>Kaynak Dosyaları</Filter>
     </ClCompile>
   </ItemGroup>
@@ -58,5 +64,10 @@
     <ClInclude Include="VAO.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="mike.png">
+      <Filter>Kaynak Dosyalar\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>
