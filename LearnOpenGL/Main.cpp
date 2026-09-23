@@ -7,14 +7,15 @@
 #include"VAO.h"
 #include"VBO.h"
 #include"EBO.h"
+#include"Texture.h"
 
 // Vertices coordinates
 GLfloat vertices[] =
-{ //    COORDINATES       /            COLORS           //
-	-0.5f, -0.5f, 0.0f,     1.0f, 0.0f,  0.0f,				0.0f, 0.0f, // Lower left corner
-	-0.5f,  0.5f, 0.0f,     0.0f, 1.0f,  0.0f,				0.0f, 5.0f,	// Lower left corner
-	 0.5f,  0.5f, 0.0f,     0.0f, 0.0f,  1.0f,				5.0f, 5.0f,	// Upper right corner
-	 0.5f, -0.5f, 0.0f,     1.0f, 1.0f,  1.0f,				5.0f, 0.0f	// Inner left corner
+{ //    COORDINATES       /            COLORS       /			TEXTURE COORDINATES			//
+	-0.5f, -0.5f, 0.0f,         1.0f, 0.0f,  0.0f,					0.0f, 0.0f,				// Lower left corner
+	-0.5f,  0.5f, 0.0f,         0.0f, 1.0f,  0.0f,					0.0f, 5.0f,				// Lower left corner
+	 0.5f,  0.5f, 0.0f,         0.0f, 0.0f,  1.0f,					5.0f, 5.0f,				// Upper right corner
+	 0.5f, -0.5f, 0.0f,         1.0f, 1.0f,  1.0f,					5.0f, 0.0f				// Inner left corner
 };
 
 // Indices for vertices order
@@ -81,31 +82,8 @@ int main()
 	GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
 
 	// Texture
-
-	int widthImg, heightImg, numColCh;
-	stbi_set_flip_vertically_on_load(true);
-	unsigned char* bytes = stbi_load("mike.png", &widthImg, &heightImg, &numColCh, 0);
-
-	GLuint texture;
-	glGenTextures(1, &texture);
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, texture);
-
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, widthImg, heightImg, 0, GL_RGB, GL_UNSIGNED_BYTE, bytes);
-	glGenerateMipmap(GL_TEXTURE_2D);
-
-	stbi_image_free(bytes);
-	glBindTexture(GL_TEXTURE_2D, 0);
-
-	GLuint tex0Uni = glGetUniformLocation(shaderProgram.ID, "tex0");
-	shaderProgram.Activate();
-	glUniform1i(tex0Uni, 0);
+	Texture mike("mike.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGB, GL_UNSIGNED_BYTE);
+	mike.texUnit(shaderProgram, "tex0", 0);
 
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
@@ -118,7 +96,7 @@ int main()
 		shaderProgram.Activate();
 		// Assigns a value to the uniform; NOTE: Must always be done after activating the Shader Program
 		glUniform1f(uniID, 0.5f);
-		glBindTexture(GL_TEXTURE_2D, texture);
+		mike.Bind();
 		// Bind the VAO so OpenGL knows to use it
 		VAO1.Bind();
 		// Draw primitives, number of indices, datatype of indices, index of indices
@@ -132,7 +110,7 @@ int main()
 	VAO1.Delete();
 	VBO1.Delete();
 	EBO1.Delete();
-	glDeleteTextures(1, &texture);
+	mike.Delete();
 	shaderProgram.Delete();
 	// Delete window before ending the program
 	glfwDestroyWindow(window);
