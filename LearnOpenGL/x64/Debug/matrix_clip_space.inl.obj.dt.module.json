@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\matrix_clip_space.obj",
+            "outputs": [
+                "x64\\Debug\\matrix_clip_space.inl.obj.dt.module.json",
+                "x64\\Debug\\matrix_clip_space.inl.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
